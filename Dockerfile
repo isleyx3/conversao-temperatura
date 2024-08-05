@@ -5,7 +5,7 @@ FROM node:18
 WORKDIR /src/app
 
 # Copie o package.json e package-lock.json para o diretório de trabalho
-COPY . ./src/app
+COPY package*.json ./
 
 # Instale as dependências
 RUN npm install
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Defina o comando para iniciar a aplicação
-CMD ["npm", "start"]
+CMD ["npm", "start"
